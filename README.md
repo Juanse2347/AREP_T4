@@ -1,13 +1,13 @@
-# Arquitecturas de Servidores de Aplicaciones, Meta protocolos de objetos, Patrón IoC, Reflexión
+# Taller de de modularización con virtualización e Introducción a Docker
 
-Este taller los estudiantes deberán construir un servidor Web (tipo Apache) en Java. El servidor debe ser capaz de entregar páginas html e imágenes tipo PNG. Igualmente el servidor debe proveer un framework IoC para la construcción de aplicaciones web a partir de POJOS. Usando el servidor se debe construir una aplicación Web de ejemplo. El servidor debe atender múltiples solicitudes no concurrentes.
+El taller consiste en crear una aplicación web pequeña usando SPRING. Una vez tengamos esta aplicación procederemos a construir un container para docker para la aplicación y los desplegaremos y configuraremos en nuestra máquina local. Luego, crearemos un repositorio en DockerHub y subiremos la imagen al repositorio. Finalmente, crearemos una máquina virtual de en AWS, instalaremos Docker , y desplegaremos el contenedor que acabamos de crear.
 
 
 ## 📌 Características
 Implementar un mecanismo de inyección de dependencias basado en anotaciones como 
 
 ```bash
-@RestController, @GetMapping y @RequestParam.
+Aplicación Web en Java con Spring Boot
 ```
 
 - Desarrollo de un mecanismo para extraer valores de consulta de las solicitudes entrantes.
@@ -21,12 +21,13 @@ get("/hello", (req, res) -> "hello " + req.getValues("name"));
 - Java 11 o superior
 - Git
 - Maven
+- Docker
 
 ## 🚀 Instalación y Ejecución
 ### 1️⃣ Clonar el repositorio
 ```bash
-git clone https://github.com/Juanse2347/AREP_T3
-cd AREP_T3
+git clone https://github.com/Juanse2347/AREP_T4
+cd AREP_T4
 ```
 
 ### 2️⃣ Compilar el proyecto con Maven
