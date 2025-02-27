@@ -77,6 +77,26 @@ Dockerfile
 
 ![Image](https://github.com/user-attachments/assets/328d3d09-3a41-4294-9547-b5ec5723817f)
 
+# Construir la Imagen de Docker
+
+```bash
+docker build --tag dockersparkprimer .
+```
+
+![Image](https://github.com/user-attachments/assets/bcc1a45f-9223-41a8-8d63-1f0697763409)
+
+
+# Ejecutar los Contenedores Docker Localmente
+
+```bash
+docker run -d -p 34000:30000 name container1 dockersparkprimer
+docker run -d -p 34001:30000 name container2 dockersparkprimer
+docker run -d -p 34002:30000 name container3 dockersparkprimer
+```
+
+![Image](https://github.com/user-attachments/assets/2701569b-5036-4761-9ebb-3647163a8977)
+
+
 
 ## 🔍 Pruebas de extremo a extremo ##
 
