@@ -68,7 +68,7 @@ curl http://localhost:30000/
 
 
 
-### 🔍 Crear la Imagen Docker ###
+## 🔍 Crear la Imagen Docker 
 
 Creamos un archivo denominado Dockerfile con el siguiente contenido:
 
