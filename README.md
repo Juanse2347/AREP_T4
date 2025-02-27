@@ -58,7 +58,7 @@ mvn clean install
 java -cp"./classes:./dependency/* co.edu.eci.arep.HttpServer co.edu.eci.arep.GreetingController
 ```
 
-![Image](https://github.com/user-attachments/assets/47f5a509-cbfd-4e83-902a-a29067b8f366)
+![Image](https://github.com/user-attachments/assets/b91ad929-476d-4574-b792-751c9c93b2c9)
 
 
 ### 4️⃣ Probar con un navegador o `curl`
@@ -67,7 +67,7 @@ curl http://localhost:30000/
 ```
 
 
-## 🔍 Crear la Imagen Docker
+### 🔍 Crear la Imagen Docker
 
 Creamos un archivo denominado Dockerfile con el siguiente contenido:
 
