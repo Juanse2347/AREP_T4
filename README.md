@@ -89,6 +89,8 @@ docker build --tag dockersparkprimer .
 
 # Ejecutar los Contenedores Docker Localmente
 
+Iniciamos los Contenedores Docker (3 instancias):
+
 ```bash
 docker run -d -p 34000:30000 name container1 dockersparkprimer
 docker run -d -p 34001:30000 name container2 dockersparkprimer
@@ -96,6 +98,112 @@ docker run -d -p 34002:30000 name container3 dockersparkprimer
 ```
 
 ![Image](https://github.com/user-attachments/assets/2701569b-5036-4761-9ebb-3647163a8977)
+
+
+Ahora abrimos Docker Desktop dashboard y encontramos algo asi:
+
+
+![Image](https://github.com/user-attachments/assets/08661bbf-8be3-43e2-8dc3-80f87ca43fbf)
+
+
+Probamos que los conetendores estan funcionando correctamente
+
+```bash
+https://localhost:34000/index.html
+```
+
+![image](https://github.com/user-attachments/assets/031cb1d4-855a-4f89-a9dc-81577946afd2)
+
+
+# Verificamos que los servicios fueron creados 
+
+
+```bash
+docker ps
+```
+
+
+![Image](https://github.com/user-attachments/assets/50067f20-e98e-4434-9327-054f4f49c04b)
+
+
+
+# Creamos un archivo llamado docker-compose para generar automáticamente una configuración docker
+
+```bash
+version: '2'
+
+
+services:
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: web
+        ports:
+            - "8087:6000"
+    db:
+        image: mongo:3.6.1
+        container_name: db
+        volumes:
+            - mongodb:/data/db
+            - mongodb_config:/data/configdb
+        ports:
+            - 27017:27017
+        command: mongod
+        
+volumes:
+    mongodb:
+    mongodb_config:
+```
+
+
+![Image](https://github.com/user-attachments/assets/2f7de5ec-afcd-48e6-ae5b-297a615668f9)
+
+
+#  Ejecutamos el docker compose
+
+```bash
+docker-compose up -d
+```
+
+![Image](https://github.com/user-attachments/assets/e4c44c75-60d5-43ac-83b4-e26873fbcc35)
+
+
+## 🔍 Subiendo la imagen a Docker Hub
+
+Ahora en nuestro motor de docker local creamos una referencia a la imagen con el nombre del repositorio a donde deseamos subirla
+
+```bash
+docker tag dockersparkprimer sebas2374/labarep4
+```
+
+![Image](https://github.com/user-attachments/assets/9b2602b1-09d1-4913-8424-b7ea6352530a)
+
+
+Ahora nos autenticamos en dockerhub 
+
+```bash
+docker login
+```
+
+![Image](https://github.com/user-attachments/assets/2accf3d6-488f-41a4-8445-7d856b20c178)
+
+
+Para finzalizar empujamos la imagen al repositorio en DockerHub, con el siguente comando
+
+```bash
+docker push sebas2374/labarep4:latest
+```
+
+
+![Image](https://github.com/user-attachments/assets/9304e1a1-ca99-479d-88ec-db35b1597034)
+
+
+Y para finalizar en la solapa de Tags de su repositorio en Dockerhub debería ver algo así:
+
+
+
+![Image](https://github.com/user-attachments/assets/5b07bcb8-a90b-492a-b41f-883c4a17af37)
 
 
 
