@@ -49,13 +49,13 @@ cd AREP_T4
 mvn clean install
 ```
 
-![Image](https://github.com/user-attachments/assets/8889b4a2-c7a5-41ee-822c-e244bc836c8c)
+![Image](https://github.com/user-attachments/assets/9a3392f2-fd28-4615-bfa2-ea5b9fdf9c00)
 
 
 ### 3️⃣ Ejecutar el servidor
 
 ```bash
-java -cp target/classes co.edu.eci.arep.HttpServer co.edu.eci.arep.GreetingController
+java -cp"./classes:./dependency/* co.edu.eci.arep.HttpServer co.edu.eci.arep.GreetingController
 ```
 
 ![Image](https://github.com/user-attachments/assets/47f5a509-cbfd-4e83-902a-a29067b8f366)
@@ -66,13 +66,16 @@ java -cp target/classes co.edu.eci.arep.HttpServer co.edu.eci.arep.GreetingContr
 curl http://localhost:30000/
 ```
 
-## 🔍 Pruebas
 
-Puedes ejecutar pruebas con JUnit:
+## 🔍 Crear la Imagen Docker
+
+Creamos un archivo denominado Dockerfile con el siguiente contenido:
+
 ```bash
-mvn test
+Dockerfile
 ```
-![Image](https://github.com/user-attachments/assets/c848bb42-f95b-4660-a23c-948d179853a4)
+
+![Image](https://github.com/user-attachments/assets/328d3d09-3a41-4294-9547-b5ec5723817f)
 
 
 ## 🔍 Pruebas de extremo a extremo ##
@@ -84,6 +87,9 @@ Probamos que nuestro servicio este funcionando correctamente
 ```bash
 http://localhost:30000/
 ```
+
+
+
 
 ## 🔍 Pruebas de Estilo de Codificacion ##
 
