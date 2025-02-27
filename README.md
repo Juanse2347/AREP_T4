@@ -117,17 +117,18 @@ https://localhost:34000/index.html
 
 # Verificamos que los servicios fueron creados 
 
+Usamos el siguiente comando:
 
 ```bash
 docker ps
 ```
 
-
 ![Image](https://github.com/user-attachments/assets/50067f20-e98e-4434-9327-054f4f49c04b)
 
 
-
 # Creamos un archivo llamado docker-compose para generar automáticamente una configuración docker
+
+Creamos un archivo en la raiz que llamaremos "docker-compose.yml" y agregamos la siguiente informacion:
 
 ```bash
 version: '2'
@@ -161,6 +162,8 @@ volumes:
 
 
 #  Ejecutamos el docker compose
+
+Ejecutamos el siguiente comando:
 
 ```bash
 docker-compose up -d
