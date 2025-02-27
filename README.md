@@ -4,17 +4,29 @@ El taller consiste en crear una aplicación web pequeña usando SPRING. Una vez 
 
 
 ## 📌 Características
-Implementar un mecanismo de inyección de dependencias basado en anotaciones como 
 
 ```bash
 Aplicación Web en Java con Spring Boot
 ```
 
-- Desarrollo de un mecanismo para extraer valores de consulta de las solicitudes entrantes.
+La aplicación utiliza el marco de trabajo Spring Boot para construir una sencilla API REST que responde con un saludo personalizado.
+
+```bash
+Contenerización con Docker
+```
+
+Se crea una imagen de Docker para encapsular la aplicación Java, lo que permite ejecutar la aplicación en cualquier máquina que soporte Docker.
   
 ```bash
-get("/hello", (req, res) -> "hello " + req.getValues("name"));
+Despliegue en AWS
 ```
+
+Una vez que la aplicación está contenida en Docker, se sube a DockerHub y luego se despliega en una máquina virtual de AWS, permitiendo la ejecución remota.
+
+```bash
+Ejecución Local y Remota
+```
+Se ejecuta localmente en contenedores Docker y también puede ser desplegada en una máquina virtual en AWS.
 
 
 ## 🛠️ Requisitos
@@ -22,6 +34,8 @@ get("/hello", (req, res) -> "hello " + req.getValues("name"));
 - Git
 - Maven
 - Docker
+- AWS EC2
+
 
 ## 🚀 Instalación y Ejecución
 ### 1️⃣ Clonar el repositorio
