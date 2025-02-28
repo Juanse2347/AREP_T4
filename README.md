@@ -226,6 +226,8 @@ sudo yum update -y
 sudo yum install docker
 ```
 
+![Image](https://github.com/user-attachments/assets/f924b2cd-1f0f-411c-9f01-cbc67184b835)
+
 
 Ahora iniciamos el servidor Socket
 
@@ -239,12 +241,28 @@ Configuramos el usuario en el grupo de docker para no tener que ingresar “sudo
 sudo usermod -a -G docker ec2-user
 ```
 
+![Image](https://github.com/user-attachments/assets/27a860aa-c2f0-4120-b11e-f77bd96f2c99)
+
+
 A partir de la imagen creada en Dockerhub cree una instancia de un contenedor docker independiente de la consola (opción “-d”) y con el puerto 6000 enlazado a un puerto físico de su máquina (opción -p):
 
 ```bash
 docker run -d -p 42000:6000 --name firstdockerimageaws usuariodedocker/nombredelrepo
 ```
 
+![Image](https://github.com/user-attachments/assets/5f8fdc17-d3d2-46a7-abd1-3c240b89cd7c)
+
+
+Ahora abrimos  los puertos de entrada del security group de la máxima virtual para acceder al servicio
+
+
+Ahora con:
+
+```bash
+http://ec2-34-227-105-59.compute-1.amazonaws.com:42000/index.html
+```
+
+![Image](https://github.com/user-attachments/assets/d811801a-545b-4f8b-9074-6fe878628129)
 
 
 ## 🔍 Pruebas de extremo a extremo ##
