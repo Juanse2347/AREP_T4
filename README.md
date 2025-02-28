@@ -253,6 +253,9 @@ docker run -d -p 42000:6000 --name firstdockerimageaws usuariodedocker/nombredel
 ![Image](https://github.com/user-attachments/assets/5f8fdc17-d3d2-46a7-abd1-3c240b89cd7c)
 
 
+![Image](https://github.com/user-attachments/assets/d811801a-545b-4f8b-9074-6fe878628129)
+
+
 Ahora abrimos  los puertos de entrada del security group de la máxima virtual para acceder al servicio
 
 
@@ -262,7 +265,8 @@ Ahora con:
 http://ec2-34-227-105-59.compute-1.amazonaws.com:42000/index.html
 ```
 
-![Image](https://github.com/user-attachments/assets/d811801a-545b-4f8b-9074-6fe878628129)
+
+![Image](https://github.com/user-attachments/assets/d644fdb6-743a-4246-ab1c-3ab00e15684b)
 
 
 ## 🔍 Pruebas de extremo a extremo ##
